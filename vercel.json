@@ -7,31 +7,31 @@
   ],
   "headers": [
     {
-      "source": "/gb/(.*)",
+      "source": "/www.caochangqing.com/gb/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=gb18030" }
       ]
     },
     {
-      "source": "/big5/(.*)",
+      "source": "/www.caochangqing.com/big5/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=big5" }
       ]
     },
     {
-      "source": "/(.*)\\.html",
+      "source": "/www.caochangqing.com/(.*)\\.html",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
     },
     {
-      "source": "/(.*)\\.htm",
+      "source": "/www.caochangqing.com/(.*)\\.htm",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
     },
     {
-      "source": "/(.*)\\.shtml",
+      "source": "/www.caochangqing.com/(.*)\\.shtml",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
