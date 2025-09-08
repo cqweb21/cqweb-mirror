@@ -1,13 +1,14 @@
 {
-  "routes": [
-    { "src": "^/gb/?$", "dest": "/gb/index.html" },
-    { "src": "^/big5/?$", "dest": "/big5/index.html" }
+  "rewrites": [
+    { "source": "/gb",   "destination": "/gb/index.html" },
+    { "source": "/gb/",  "destination": "/gb/index.html" },
+    { "source": "/big5",   "destination": "/big5/index.html" },
+    { "source": "/big5/",  "destination": "/big5/index.html" }
   ],
   "headers": [
     { "source": "/gb",   "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
     { "source": "/gb/",  "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
     { "source": "/gb/:path*", "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
-
     { "source": "/big5",   "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] },
     { "source": "/big5/",  "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] },
     { "source": "/big5/:path*", "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] }
