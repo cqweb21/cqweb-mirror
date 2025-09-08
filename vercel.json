@@ -1,21 +1,15 @@
 {
   "headers": [
     {
-      "source": "/gb/(.*)",
+      "source": "/gb/:path*",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=gb18030" }
       ]
     },
     {
-      "source": "/big5/(.*)",
+      "source": "/big5/:path*",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=big5" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.(html|htm|shtml)",
-      "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
     }
   ]
