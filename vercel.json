@@ -4,5 +4,37 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "www.caochangqing.com/$1" }
+  ],
+  "headers": [
+    {
+      "source": "/gb/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=gb18030" }
+      ]
+    },
+    {
+      "source": "/big5/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=big5" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.htm",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.shtml",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
+      ]
+    }
   ]
 }
