@@ -1,4 +1,8 @@
 {
+  "routes": [
+    { "src": "^/gb/?$", "dest": "/gb/index.html" },
+    { "src": "^/big5/?$", "dest": "/big5/index.html" }
+  ],
   "headers": [
     {
       "source": "/gb/:path*",
