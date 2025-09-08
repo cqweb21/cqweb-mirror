@@ -1,37 +1,19 @@
 {
-  "builds": [
-    { "src": "www.caochangqing.com/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "www.caochangqing.com/$1" }
-  ],
   "headers": [
     {
-      "source": "/www.caochangqing.com/gb/(.*)",
+      "source": "/gb/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=gb18030" }
       ]
     },
     {
-      "source": "/www.caochangqing.com/big5/(.*)",
+      "source": "/big5/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=big5" }
       ]
     },
     {
-      "source": "/www.caochangqing.com/(.*)\\.html",
-      "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
-      ]
-    },
-    {
-      "source": "/www.caochangqing.com/(.*)\\.htm",
-      "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
-      ]
-    },
-    {
-      "source": "/www.caochangqing.com/(.*)\\.shtml",
+      "source": "/(.*)\\.(html|htm|shtml)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
