@@ -4,17 +4,12 @@
     { "src": "^/big5/?$", "dest": "/big5/index.html" }
   ],
   "headers": [
-    {
-      "source": "/gb/:path*",
-      "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=gb18030" }
-      ]
-    },
-    {
-      "source": "/big5/:path*",
-      "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=big5" }
-      ]
-    }
+    { "source": "/gb",   "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
+    { "source": "/gb/",  "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
+    { "source": "/gb/:path*", "headers": [ { "key": "Content-Type", "value": "text/html; charset=gb18030" } ] },
+
+    { "source": "/big5",   "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] },
+    { "source": "/big5/",  "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] },
+    { "source": "/big5/:path*", "headers": [ { "key": "Content-Type", "value": "text/html; charset=big5" } ] }
   ]
 }
