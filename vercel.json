@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "www.caochangqing.com/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "www.caochangqing.com/$1" }
+  ]
+}
