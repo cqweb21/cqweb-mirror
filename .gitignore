@@ -1,0 +1,6 @@
+wget.log
+server.log
+hts-cache/
+_backup*/
+_backup_non_utf8*/
+.DS_Store
