@@ -1,0 +1,4 @@
+backend:
+  name: github
+  repo: cqweb21/cqweb-mirror   # ← 已经改成你的仓库
+  branch: main                 # ← 用 main 分支
