@@ -2,8 +2,8 @@ backend:
   name: github
   repo: cqweb21/cqweb-mirror
   branch: main
-  # 如果你先用 Vercel 的临时域名测试，就写它：
-  base_url: https://cqweb-mirror.vercel.app
+  base_url: https://cqweb21-site.vercel.app
+  auth_endpoint: api/auth
 
 publish_mode: simple
 locale: zh_CN
