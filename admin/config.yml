@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: cqweb21/cqweb-mirror   # ← 已经改成你的仓库
-  branch: main                 # ← 用 main 分支
-backend:
-  name: github
   repo: cqweb21/cqweb-mirror
   branch: main
+  # 如果你先用 Vercel 的临时域名测试，就写它：
+  base_url: https://cqweb-mirror.vercel.app
+
 publish_mode: simple
 locale: zh_CN
 
@@ -38,22 +37,3 @@ collections:
       - { label: "發佈日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
       - { label: "主圖", name: "cover", widget: "image", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
-
-  # （可选）如果你偶尔需要直接在后台改 HTML，可以打开下面两组：
-  # - name: "gb_html"
-  #   label: "简体区（直接编辑 HTML）"
-  #   folder: "gb"
-  #   create: false
-  #   extension: "html"
-  #   editor: { preview: false }
-  #   fields:
-  #     - { label: "HTML 源码", name: "body", widget: "code", default: "", output_code_only: true, language: "html" }
-  #
-  # - name: "big5_html"
-  #   label: "繁体区（直接编辑 HTML）"
-  #   folder: "big5"
-  #   create: false
-  #   extension: "html"
-  #   editor: { preview: false }
-  #   fields:
-  #     - { label: "HTML 源码", name: "body", widget: "code", default: "", output_code_only: true, language: "html" }
