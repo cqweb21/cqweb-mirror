@@ -15,24 +15,20 @@
 </head>
 <body>
 
-  <!-- 簡繁切換按鈕 -->
   <div class="toolbar">
     <strong>字型：</strong>
     <button id="btn-cn" type="button">简体</button>
     <button id="btn-tw" type="button">繁體</button>
   </div>
 
-  <!-- 正文容器 -->
   <div id="article">
     <h1>最新更新（繁體）</h1>
     <p>以下為透過後台發佈的 Markdown 文章（點擊即可開啟）。</p>
     <ul>
-      <!-- 每發一篇新文，就在這裡加一行。範例： -->
       <li>2025-09-11 — <a href="/content/big5/posts/2025-09-11-my-first.md">我的第一篇 Markdown</a></li>
     </ul>
   </div>
 
-  <!-- OpenCC 簡繁轉換 -->
   <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js"></script>
   <script>
     const toTW = OpenCC.Converter({ from: 'cn', to: 'tw' });
