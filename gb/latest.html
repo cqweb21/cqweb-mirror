@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>最新更新（简体）</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{max-width:800px;margin:2rem auto;padding:0 1rem;line-height:1.6;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial;}
+    h1{font-size:1.6rem;margin:0 0 1rem;}
+    ul{padding-left:1.2rem}
+    li{margin:0.3rem 0}
+    a{text-decoration:none}
+    .toolbar{display:flex;gap:.5rem;align-items:center;margin:1rem 0;}
+  </style>
+</head>
+<body>
+
+  <!-- 简繁切换按钮 -->
+  <div class="toolbar">
+    <strong>字型：</strong>
+    <button id="btn-cn" type="button">简体</button>
+    <button id="btn-tw" type="button">繁體</button>
+  </div>
+
+  <!-- 正文容器 -->
+  <div id="article">
+    <h1>最新更新（简体）</h1>
+    <p>以下为通过后台发布的 Markdown 文章（点击即可打开）。</p>
+    <ul>
+      <!-- 每发一篇新文，就在这里加一行。示例： -->
+      <li>2025-09-11 — <a href="/content/gb/posts/2025-09-11-my-first.md">我的第一篇 Markdown</a></li>
+    </ul>
+  </div>
+
+  <!-- OpenCC 简繁转换 -->
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js"></script>
+  <script>
+    const toTW = OpenCC.Converter({ from: 'cn', to: 'tw' });
+    const toCN = OpenCC.Converter({ from: 'tw', to: 'cn' });
+    const article = document.getElementById('article');
+    const ORIGINAL_HTML = article.innerHTML;
+    document.getElementById('btn-tw').addEventListener('click', () => {
+      article.innerHTML = toTW(ORIGINAL_HTML);
+    });
+    document.getElementById('btn-cn').addEventListener('click', () => {
+      article.innerHTML = toCN(ORIGINAL_HTML);
+    });
+  </script>
+
+</body>
+</html>
