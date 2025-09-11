@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
   <meta charset="utf-8">
   <title>最新更新（繁體）</title>
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <!-- 简繁切换按钮 -->
+  <!-- 簡繁切換按鈕 -->
   <div class="toolbar">
     <strong>字型：</strong>
     <button id="btn-cn" type="button">简体</button>
@@ -25,14 +25,14 @@
   <!-- 正文容器 -->
   <div id="article">
     <h1>最新更新（繁體）</h1>
-    <p>以下为通过后台发布的 Markdown 文章（点击即可打开）。</p>
+    <p>以下為透過後台發佈的 Markdown 文章（點擊即可開啟）。</p>
     <ul>
-      <!-- 每发一篇新文，就在这里加一行。示例： -->
-      <li>2025-09-11 — <a href="/content/gb/posts/2025-09-11-my-first.md">我的第一篇 Markdown</a></li>
+      <!-- 每發一篇新文，就在這裡加一行。範例： -->
+      <li>2025-09-11 — <a href="/content/big5/posts/2025-09-11-my-first.md">我的第一篇 Markdown</a></li>
     </ul>
   </div>
 
-  <!-- OpenCC 简繁转换 -->
+  <!-- OpenCC 簡繁轉換 -->
   <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js"></script>
   <script>
     const toTW = OpenCC.Converter({ from: 'cn', to: 'tw' });
