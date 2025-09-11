@@ -12,6 +12,7 @@ media_folder: "static/uploads"
 public_folder: "/static/uploads"
 
 collections:
+  # === 文章（Markdown） ===
   - name: "gb_posts"
     label: "简体文章（Markdown 新内容）"
     folder: "content/gb/posts"
@@ -38,15 +39,21 @@ collections:
       - { label: "主圖", name: "cover", widget: "image", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
-      - name: "gb_latest"
+  # === 页面：latest.html 由后台直接编辑 ===
+  - name: "gb_latest"
     label: "页面：最新更新（简体）"
     files:
       - label: "最新更新页（简体）"
         name: "gb_latest_page"
         file: "gb/latest.html"
-        editor: { preview: false }
+        editor:
+          preview: false
         fields:
-          - { label: "HTML 源码", name: "body", widget: "code", output_code_only: true, language: "html" }
+          - label: "HTML 源码"
+            name: "body"
+            widget: "code"
+            output_code_only: true
+            language: "html"
 
   - name: "big5_latest"
     label: "頁面：最新更新（繁體）"
@@ -54,6 +61,11 @@ collections:
       - label: "最新更新頁（繁體）"
         name: "big5_latest_page"
         file: "big5/latest.html"
-        editor: { preview: false }
+        editor:
+          preview: false
         fields:
-          - { label: "HTML 原始碼", name: "body", widget: "code", output_code_only: true, language: "html" }
+          - label: "HTML 原始碼"
+            name: "body"
+            widget: "code"
+            output_code_only: true
+            language: "html"
